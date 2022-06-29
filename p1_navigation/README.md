@@ -2,9 +2,21 @@
 
 ### Introduction
 
-This Reinforcement Learning (RL) project contains an example of a DQN to solve the unity banana collection environment. 
+This Reinforcement Learning (RL) project contains an example of a DQN to solve the unity banana collection environment. This project uses Pytorch for the models and Unity for the environment rendering.
+
+### Contents
+
+- *Banana_Data*: folder of necessary files for the custom unity environment
+- *Banana.exe*: Windows 64-bit executable of the unity environment
+- *dqn_agent.py*: Implementation of the agent used to make actions and learn
+- *env.txt*: The requirements.txt or environment specs used to run/train
+- *model.py*: The pytorch neural network implementations (DQN and Dueling DQN)
+- *Navigation.ipynb*: (Start Here after README) jupyter notebook used to implement and visualize DQN algorithm
+- *Report.md*: Summary of project outcomes
 
 ### Models and Architectures
+
+This project uses a Deep Q-Network (DQN) to solve the environment, which use deep neural networks to as a function approximator to the action-value function in Q-learning. For more information about DQNs, see the original paper [here](https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf). 
 
 This DQN uses methods to improve performance such as:
 
@@ -12,6 +24,8 @@ This DQN uses methods to improve performance such as:
 - Experience Replay
 
 There is also a separate dueling DQN implementation in `model.py` (`DuelingQNetwork`).
+
+A detailed description of the models and architecture can be found in `report.ipynb`
 
 ![Trained Agent](trained_example.gif)
 
@@ -37,7 +51,9 @@ The analysis consists of a jupyter notebook titled `Navigation.ipynb`. To run th
 
 Alternatively, you can install the exact environment using the `env.txt` file by treating it as a `requirements.txt` file in pip.
 
-The `Banana.exe` file and `Banana_Data` folder are necessary for the unity environment to run, but require no installation.
+The `Banana.exe` file and `Banana_Data` folder are necessary for the unity environment to run, but require no installation. However, the files in this repository assume that you are running on 64-bit Windows. If you are **NOT** running on 64-bit Windows, please download the appropriate banana environment files by following the instructions in [this](https://github.com/udacity/Value-based-methods/tree/main/p1_navigation) repository.
+
+Place the downloaded files in the `p1_navigation` folder of this repository.
 
 ### Instructions
 
