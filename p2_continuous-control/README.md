@@ -2,7 +2,7 @@
 
 ### Introduction
 
-This Reinforcement Learning (RL) project contains an example of a Twin Delayed DDPG (TD3) to solve the unity Reacher environment. This project uses Pytorch for the models and Unity for the environment rendering.
+This Reinforcement Learning (RL) project contains an example of a Twin Delayed DDPG (TD3) to solve the unity single-agent Reacher environment. This project uses Pytorch for the models and Unity for the environment rendering.
 
 ### Contents
 
