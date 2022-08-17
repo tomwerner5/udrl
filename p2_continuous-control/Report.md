@@ -54,8 +54,6 @@ This agent was able to solve the environment in 391 episodes. A plot of the aver
 
 ![Average Rewards over Time](avg_reward.png "Average Rewards over Time")
 
-The 
-
 ### Ideas for future work
 
 While this TD3 implementation solves this environment fairly well, there are still many areas for improvement. Future work could consider incorporating gradient clipping or more sophisticated noise functions such as OU noise or adaptive parameter noise. This implementation of TD3, while effective at solving the problem, takes a significant amount of run time and is not as computationally efficient. If parallel methods such as A3C could be adapted to TD3, it might improve the computational efficiency and make it more practical. Another way to improve performance might be to try other algorithms, such as SAC. This example was solved using trial and error by the author, but hyperparamter tuning all the networks and the RL algorithm as a whole could lead to better results.
