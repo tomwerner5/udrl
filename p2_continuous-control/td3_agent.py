@@ -263,35 +263,3 @@ class GaussianNoise(object):
         if clip:
             x = x.clamp(-self.clip_value, self.clip_value)
         return x
-
-
-class OUNoise(object):
-    """Ornstein-Uhlenbeck process."""
-    def __init__(self, action_size, sigma=0.2, theta=0.15, dt=1e-2, x_initial=None, random_state=42):
-        """Initialize parameters and noise process."""
-        self.theta = theta
-        self.mu = np.zeros(action_size)
-        self.sigma = sigma
-        self.dt = dt
-        self.x_initial = x_initial
-        self.reset()
-
-    def __call__(self):
-        """Update internal state and return it as a noise sample."""
-        x = (
-            self.x_prev
-            + self.theta * (self.mu - self.x_prev) * self.dt
-            + self.sigma * np.sqrt(self.dt) * np.random.normal(size=self.mu.shape)
-        )
-
-        self.x_prev = x
-        return x
-
-    def reset(self):
-        """Reset the internal state (= noise) to mean (mu)."""
-        if self.x_initial is not None:
-            self.x_prev = self.x_initial
-        else:
-            self.x_prev = np.zeros_like(self.mu)
-
-
