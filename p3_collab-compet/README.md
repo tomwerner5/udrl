@@ -4,6 +4,8 @@
 
 This Reinforcement Learning (RL) project contains an example of a multi-agent Twin Delayed DDPG (MATD3) to solve the unity Tennis environment. This project uses Pytorch for the models and Unity for the environment rendering.
 
+![Trained Agent](trained_agent.gif)
+
 ### Contents
 
 - *Tennis_Data*: folder of necessary files for the custom unity environment

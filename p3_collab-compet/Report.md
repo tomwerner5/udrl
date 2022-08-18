@@ -60,6 +60,10 @@ This agent was able to solve the environment in 2010 episodes. A plot of the ave
 
 ![Average Rewards over Time](avg_reward.png "Average Rewards over Time")
 
+The agents both seem to have learned that a good strategy is to wave your paddle back and forth quickly, and you're likely to get a hit that will keep the ball in motion. Below is a video capture of the agents playing.
+
+![Trained Agent](trained_agent.gif)
+
 ### Ideas for future work
 
 While this MATD3 implementation solves this environment fairly well, there is still much room for improvement. In this instance, the actor and critic networks for each agent are of equal size and use the same set of hyperparameters. It would be interesting to experience with different settings between the two agents, for example, would it be possible to create an agent that is less skilled, or develop agents with different strategies?
